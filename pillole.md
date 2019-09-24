@@ -1,16 +1,15 @@
 
-# 1. Table of contents       
-- [1. Table of contents](#1-table-of-contents)
-      - [1.0.0.1. Pillola informatica #0](#1001-pillola-informatica-0)
-      - [1.0.0.2. Pillola informatica #1](#1002-pillola-informatica-1)
-      - [1.0.0.3. Pillola informatica #2](#1003-pillola-informatica-2)
-      - [1.0.0.4. Pillola informatica #3](#1004-pillola-informatica-3)
-      - [1.0.0.5. Pillola informatica #4](#1005-pillola-informatica-4)
-      - [1.0.0.6. Bonus: Installazione di atom](#1006-bonus-installazione-di-atom)
-      - [1.0.0.7. Pillola informatica #5](#1007-pillola-informatica-5)
-      - [1.0.0.8. Pillola informatica #6](#1008-pillola-informatica-6)
+# Indice 
+  - [Pillola informatica #0](#pillola-informatica-0)
+  - [Pillola informatica #1](#pillola-informatica-1)
+  - [Pillola informatica #2](#pillola-informatica-2)
+  - [Pillola informatica #3](#pillola-informatica-3)
+  - [Pillola informatica #4](#pillola-informatica-4)
+    - [Bonus: Installazione di atom](#bonus-installazione-di-atom)
+  - [Pillola informatica #5](#pillola-informatica-5)
+  - [Pillola informatica #6](#pillola-informatica-6)
 
-#### 1.0.0.1. Pillola informatica #0
+## Pillola informatica #0
 
 Partiamo dal primo *concetto fondamentale* senza in quale non ci sarebbe possibile proseguire col resto:
 - un computer è un attrezzo stupido che fa calcoli
@@ -29,7 +28,7 @@ I due approcci di cui sopra sono molto diversi ed ognuno presenta i suoi vantagg
 
 
 
-#### 1.0.0.2. Pillola informatica #1
+## Pillola informatica #1
 
 Facciamo una breve carrellata di quelli che sono gli **elementi** che compongono un **programma**. Non ci aiuteranno ancora del tutto a capire come scriverne uno, ma possiamo pensarla come una piccola *raccolta* di parole chiave generiche che pongono le basi per andare più spediti mentre procediamo in questo viaggio. Cominciamo quindi col dire cos'è una **variabile**: senza appellarci a concetti strani, una variabile *di fatto* è una *scatola*, un contenitore che possiamo utilizzare per *\"mettere da parte\"* qualcosa ed utilizzarlo in un secondo momento e, come dice anche il nome, **può cambiare nel tempo**.
 
@@ -51,7 +50,7 @@ Com'è ovvio che sia, ci sono praticamente *infinite espressioni ed infiniti sta
 
 
 
-#### 1.0.0.3. Pillola informatica #2
+## Pillola informatica #2
 
 Ripartiamo dalla puntata precedente e facciamo un piccolo recap di un paio di concetti che mi sembra utile tenere sotto mano prima di proseguire col resto. Vediamo velocemente *com'è fatto un computer*, poi, in ultima battuta, iniziamo a parlare di **python** come strumento per scrivere programmi.
 
@@ -95,7 +94,7 @@ Ci sono poi i costrutti logici, che sono quelli che ci permettono di esprimere d
 
 
 
-#### 1.0.0.4. Pillola informatica #3
+## Pillola informatica #3
 
 Vediamo gli ultimi 2 concetti puramente teorici riguardo la **programmazione in generale**, ma che sono concetti cardine per quanto riguarda **python**, senza avere almeno idea di cosa siano ci sarebbe impossibile capire quello che stiamo facendo.
 Iniziamo quindi col dire cos'è una **funzione**:
@@ -147,7 +146,7 @@ Soprattutto ques'ultima parte mi rendo conto sia molto molto fumosa, ma la svisc
 
 
 
-#### 1.0.0.5. Pillola informatica #4
+#### Pillola informatica #4
 
 Oggi ci mettiamo nelle condizioni di poter iniziare a scrivere dei programmi con l'ormai famigerato linguaggio **python**. La prima cosa da fare quindi è installarlo sul nostro computer in modo da trovarci un ambiente all'interno del quale poter far girare l'**interprete** e dargli in pasto i sorgenti dei programmi che andremo a scrivere.
 
@@ -224,7 +223,7 @@ Se l'installazione di **python** è andata a buon fine ci troveremo davanti una 
 
 **CONGRATULAZIONI!** Adesso siamo (quasi) in grado di scrivere dei programmi e automatizzare un sacco di operazioni noiose :)
 
-#### 1.0.0.6. Bonus: Installazione di atom
+#### Bonus: Installazione di atom
 
 In precedenza abbiamo visto che i *sorgenti* di un programma sono costituiti da dei file di testo. Per scrivere in questi file abbiamo bisogno quindi di un **Editor**, cioè un programma per scrivere. Qualcuno potrebbe pensare al classico *Word*, ma quest'ultimo in realtà non va bene. Questo perchè *Word* non si limita a scrivere il testo che digitiamo dentro al file, ma aggiunge dei dati che gli servono per gestire correttamente la formattazione del testo e un sacco di altra roba che all'*interprete python* (ma anche ad un compilatore) darebbe fastidio, impedendoci di raggiungere il risultato sperato.
 
@@ -264,7 +263,7 @@ Nella prossima puntata vedremo un paio di funzioni utili per cominciare ad utili
 
 
 
-#### 1.0.0.7. Pillola informatica #5
+## Pillola informatica #5
 
 La volta scorsa ci siamo lasciati con **python** ed **atom** freschi di installazione e quest'ultimo aperto e pronto all'uso. Oggi vediamo quindi come effettuare un primo mini-setup di un progetto e come iniziare a lavorare con python scrivendo il nostro **primo script**.
 
@@ -348,7 +347,7 @@ A partire dalla prossima volta inizieremo a scrivere dei veri e propri programmi
 
 
 
-#### 1.0.0.8. Pillola informatica #6
+## Pillola informatica #6
 
 Oggi comincia la vera svolta, iniziamo a fare un primo programmino che faccia realmente qualcosa. Come primo esempio ho pensato di fare un piccolo **risolutore di calcoli**. Una cosa semplice ma che ci aiuti a prendere confidenza con la stesura di codice, i primi costrutti e le prime *"pratiche comuni"* che permeano la vita di tutti i giorni quando si programma.
 
