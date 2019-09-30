@@ -9,6 +9,7 @@
   - [Pillola informatica #5](#pillola-informatica-5)
   - [Pillola informatica #6](#pillola-informatica-6)
   - [Pillola informatica #7](#pillola-informatica-7)
+  - [Pillola informatica #8](#pillola-informatica-8)
 
 ## Pillola informatica #0
 
@@ -701,3 +702,57 @@ Come possiamo notare, il blocco di codice che esegue il nostro calcolo si è spo
 Se proviamo ad eseguirlo noteremo che il funzionamento non è cambiato rispetto a prima. Noi però sappiamo che "sotto il cofano" abbiamo operato una modifica importante. Nella prossima pillola vedremo come trasformare il nostro programma in una piccola **shell** da cui potremo eseguire tutti i calcoli che vogliamo in sequenza.
 
 **Compiti:** per prendere confidenza con la definizione di funzioni, prova a definirne una che effettua il calcolo della potenza di un numero e prova a sostituirla al modo in cui la calcolavi nell'esercizio precedente.
+
+
+
+## Pillola informatica #8
+
+Trattandosi di un argomento piuttosto spinoso, almeno all'inizio. In questa pillola vediamo in modo un po' più approfondito l'argomento **funzioni**. Come abbiamo già detto, una *funzione* è una parte di codice che possiamo **riutilizzare** più di una volta a nostro piacimento senza doverla riscrivere. Volendo fare un elenco di quelle che sono le *caratteristiche* di una funzione, abbiamo i seguenti elementi:
+
+- Un **nome** che identifica la funzione
+- (opzionale) Una lista di **argomenti**, detti anche **parametri formali**, che sono dati su cui la funzione opera
+- (opzionale) Uno o più tipi (nel caso di **python**, si tratta di oggetti) di **ritorno** che sono i dati che la funzione ***restituisce*** a chi l'ha chiamata
+
+Per fare un esempio degli elementi di cui sopra, scriviamo una funzione che calcoli la potenza (senza utilizzare l'operatore "\*\*") di un numero, prendendo come parametri la **base** da elevare a potenza e l'**esponente** a cui vogliamo elevare la base. Per definirla, facciamo come segue:
+
+```python
+def potenza(base, exp):
+    result = 1
+    for _ in range(exp):
+        result *= base
+    return result
+```
+
+Tralasciamo per un momento i dettagli costrutto `for` che abbiamo appena scritto (lo vedremo meglio in una pillola successiva), questa funzione presenta tutte le *caratteristiche* che abbiamo visto poco fa.
+- **Nome:** *potenza*
+- **Parametri formali:** *base, exp*
+- **Oggetto di ritorno:** *result*
+
+Immaginiamo di voler calcolare la potenza quarta del numero 5 utilizzando la nostra funzione, quello che dovremmo fare all'interno del nostro codice è quanto segue:
+
+```python
+res = potenza(5, 4)
+```
+
+In questo modo stiamo **chiamando** la funzione *potenza* dicendole di "fare il suo mestiere" utilizzando il numero `5` ed il numero `4` e di mettere il risultato del suo lavoro all'interno della variabile `res`. I numeri che abbiamo **passato** alla funzione, sono detti **parametri attuali**. In pratica abbiamo "applicato" la funzione *potenza* sui numeri 4 e 5.
+
+Per attuare questa "applicazione", ciò che fa l'interprete python è:
+
+- Legge il codice **non indentato** dello script
+- Quando trova il nome di una funzione ne leggere i **parametri attuali** e li mette in delle **variabili** chiamate come i **parametri formali**
+- Salta alla **definizione** della funzione che è stata chiamata
+- Esegue il codice della funzione fino alla fine (salvo eccezioni particolari che non ci interessano al momento)
+- Torna al punto dove è stata chiamata la funzione e, se è previsto che il risultato venga messo da qualche parte (cioè se ci abbiamo messo la variabile con l'uguale) mette il risultato nella variabile giusta e prosegue
+
+Per fare un recap di quanto detto ricordiamoci qualche parola chiave:
+- **Definizione**: identificata dalla parola `def`, ci serve per definire il comportamento della funzione, in pratica scriviamo:
+    - Cosa fa
+    - Quali argomenti prende (i *parametri formali*)
+    - Che risultato restituice
+- **Parametri formali**: non sapendo su quali valori dovrà andare ad agire la nostra funzione, ma sapendo che tipo di operazioni farà, diamo dei nomi "generici" ai dati su cui dobbiamo lavorare, in modo tale da riuscire a definire un comportamento completo
+- **Chiamata**: è l'uso vero e proprio della funzione, diciamo all'interprete python: "ok usa questa funzione"
+- **Parametri attuali**: quando facciamo una **chiamata** ad una funzione, dobbiamo dire a python su quali dovrà agire **davvero** il comportamento che abbiamo definito, dobbiamo quindi specificare i valori con cui vanno sostituiti i *parametri formali* per poter calcolare il risultato che ci interessa.
+
+Ovviamente, come ci si può aspettare e come abbiamo visto anche nelle pillole precedenti, le funzioni possono anche **non** avere parametri formali (e quindi lavorare senza bisogno di informazioni aggiuntive) oppure possono non avere tipi di ritorno (come nel caso in cui la funzione deve solo stampare a video qualcosa) e quindi non necessitano di avere un assegnamento ( `qualcosa = `) prima della chiamata.
+
+Ci sono ancora tanti aspetti da esplorare sulle chiamate a funzione, ma prima di mettere altra carne sul fuoco è conveniente prendere confidenza con quanto visto finora.
