@@ -5,12 +5,12 @@
   - [Pillola informatica #2](#pillola-informatica-2)
   - [Pillola informatica #3](#pillola-informatica-3)
   - [Pillola informatica #4](#pillola-informatica-4)
-    - [Bonus: Installazione di atom](#bonus-installazione-di-atom)
+      - [Bonus: Installazione di atom](#bonus-installazione-di-atom)
   - [Pillola informatica #5](#pillola-informatica-5)
   - [Pillola informatica #6](#pillola-informatica-6)
   - [Pillola informatica #7](#pillola-informatica-7)
   - [Pillola informatica #8](#pillola-informatica-8)
-
+  - [Pillola informatica #9](#pillola-informatica-9)
 ## Pillola informatica #0
 
 Partiamo dal primo *concetto fondamentale* senza in quale non ci sarebbe possibile proseguire col resto:
@@ -148,7 +148,7 @@ Soprattutto ques'ultima parte mi rendo conto sia molto molto fumosa, ma la svisc
 
 
 
-#### Pillola informatica #4
+## Pillola informatica #4
 
 Oggi ci mettiamo nelle condizioni di poter iniziare a scrivere dei programmi con l'ormai famigerato linguaggio **python**. La prima cosa da fare quindi è installarlo sul nostro computer in modo da trovarci un ambiente all'interno del quale poter far girare l'**interprete** e dargli in pasto i sorgenti dei programmi che andremo a scrivere.
 
@@ -756,3 +756,166 @@ Per fare un recap di quanto detto ricordiamoci qualche parola chiave:
 Ovviamente, come ci si può aspettare e come abbiamo visto anche nelle pillole precedenti, le funzioni possono anche **non** avere parametri formali (e quindi lavorare senza bisogno di informazioni aggiuntive) oppure possono non avere tipi di ritorno (come nel caso in cui la funzione deve solo stampare a video qualcosa) e quindi non necessitano di avere un assegnamento ( `qualcosa = `) prima della chiamata.
 
 Ci sono ancora tanti aspetti da esplorare sulle chiamate a funzione, ma prima di mettere altra carne sul fuoco è conveniente prendere confidenza con quanto visto finora.
+
+
+## Pillola informatica #9
+
+Ora che abbiamo iniziato a maneggiare qualche costrutto e sappiamo più o meno cos'è una funzione, compiamo un ulteriore passo in avanti verso la comprensione del codice che abbiamo davanti. 
+
+Come prima novità introduciamo i **commenti**: parti di testo che l'interprete ignorerà, ma che sono molto utili per diversi aspetti, in particolare, se usati in modo intelligente, ci aiutano a:
+
+- Generare rapidamente la documentazione del codice ed averla a portata di mano
+- Tenere traccia di quello che stiamo facendo in un blocco di codice
+
+In particolare, in *python*, i commenti si fanno mettendo un `#` davanti al testo che compone il commento. In questo modo:
+
+```python
+x = 5
+# Questo è un commento, l'interprete lo salterà
+print(x)
+```
+Come possiamo immaginare, in questa pillola (ma anche in quelle future) faremo un **ampio** uso dei **commenti** per spiegare il codice che andremo a scrivere.
+
+Ciò che potrebbe essere rimasto un po' "fumoso" nelle puntate precedenti è la parte relativa al *passaggio* delle variabili alle funzioni. Per comprendere meglio cosa succede e perchè ciò vada fatto diventa fondamentale parlare di **scope**, detto anche **visibilità**, di una variabile.
+
+Se vogliamo dare una definizione pratica di cosa sia lo **scope** di una variabile, possiamo dire che: 
+
+*Lo scope di una variabile sono i punti del codice in cui questa può essere utilizzata*
+
+In particolare, per quello che ci riguarda, possiamo dividere lo scope delle variabili in *2 livelli*, anche se guardando bene, il primo è solo un caso particolare del secondo, questi livelli sono:
+
+- **Visibilità globale**: la variabile è accessibile ovunque all'interno del programma
+- **Visibilità di blocco**: la variabile è accessibile all'interno del **blocco** in cui viene *istanziata* (cioè dove viene creata) ed in tutti i suoi **sottoblocchi** (ovvero i blocchi indentati all'interno di quel blocco)
+
+Per rendere un po' meno astratte queste definizioni vediamo qualche esempio di quello che stiamo dicendo, supponiamo di aprire un file e di definire un po' di variabili.
+
+***scope.py***
+```python
+
+x = 10 # Una variabile definita così è detta Globale, ed è visibile ovunque
+
+if x < 5:
+	y = x * 2 
+# y è una variabile globale, ma viene istanziata all'interno di un blocco
+# quindi sarà visibile SOLO se si entra effettivamente nel blocco
+
+z = y + 3 
+# Dato che nel blocco if non ci entriamo perchè x >= 5
+# questa istruzione non funzionerà, generando di conseguenza un errore
+```
+
+Fin qui niente di eccezionale, ma la cosa diventa interessante se iniziamo a tirare in mezzo le **funzioni**.
+
+***scope.py***
+```python
+def f(x, y):
+	k = 4
+	return (x + y) * k 
+
+def test(arg1, arg2):
+	print(arg1)
+	print(k) # Questa istruzione non funzionerà, generando un errore e facendo uscire l'interprete
+	print(arg2)
+
+print(f(4,5))
+test("Ciao", "a tutti")
+```
+Se proviamo ad eseguire lo script, otterremo un output del genere:
+
+```
+36
+Ciao
+Traceback (most recent call last):
+  File "scope.py", line 22, in <module>
+    test("Ciao", "a tutti")
+  File "scope.py", line 18, in test
+    print(k) # Questa istruzione non funzionerà, generando un errore e facendo uscire l'interprete
+NameError: name 'k' is not defined
+```
+In particolare, l'ultima riga:
+```
+NameError: name 'k' is not defined
+```
+Ci fa notare che `k` non è definita.
+Perchè questa cosa? `k` è stata definita qualche riga più su, come mai questo errore?
+
+Come abbiamo scritto poco fa, è un errore relativo allo **scope** di `k`, che è stata definita *all'interno di una funzione*, ed è quindi visibile soltanto all'interno della stessa. Se vogliamo che `k` sia visibile all'interno della funzione `test` possiamo fare in 2 modi:
+
+- Rendere `k` globale
+- Passare `k` come *argomento* alla funzione `test`
+
+<br>
+Nel primo caso, lo script diventerebbe:
+
+***scope.py***
+```python
+k = 4 # k è diventata globale
+
+def f(x, y):
+	return (x + y) * k 
+
+def test(arg1, arg2):
+	print(arg1)
+	print(k)
+	print(arg2)
+
+print(f(4,5))
+test("Ciao", "a tutti")
+```
+
+<br>
+Mentre nel secondo sarebbe:
+
+***scope.py***
+```python
+
+def f(x, y):
+	k = 4
+	return (x + y) * k 
+
+def test(arg1, arg2, k):
+	print(arg1)
+	print(k)
+	print(arg2)
+
+print(f(4,5))
+test("Ciao", "a tutti", 4) # Notare che qui la chiamata è cambiata ed è stato passato il valore 4 come valore per k
+```
+
+In generale, l'utilizzo di variabili globali è da evitare il più possibile, i motivi sono molteplici, magari li discuteremo in dettaglio più avanti, ma per ora ci basti sapere che nelle variabili **globali** può andarci a scrivere *chiunque*, quindi diventa molto facile fare pasticci, il che è sicuramente preferibile evitarlo finché si può.
+
+Fino ad ora abbiamo sempre utilizzato **python** facendogli eseguire delle istruzioni direttamente all'interno dello script, mettendo tutto globale e usando le funzioni in modo un po' "scoordinato". In altri linguaggi di programmazione però, la cosa funziona in maniera leggermente diversa. Per esempio: in linguaggi come *C, C++ e Java* i programmi, per essere eseguiti correttamente, hanno bisogno di una funzione "speciale" chiamata ***main***, la quale viene **SEMPRE** eseguita per prima e da cui parte tutto quanto il programma. Viene da sé che le varaibili definite all'interno di questa funzione saranno visibili **soltanto lì** e, per renderle disponibili alle altre, andranno **passate come argomento**.
+
+Com'è facile immaginare, quest'ultima pratica è possibile farla anche in **python**, e sfruttarla ci darà diversi vantaggi di cui parleremo più avanti nel dettaglio. Per adesso, limitiamoci a *traslare* il nostro workflow in questa direzione. Per convertire quindi il nostro script faremo:
+
+***scope.py***
+```python
+def f(x, y, k):
+	return (x + y) * k 
+
+def test(arg1, arg2, k):
+	print(arg1)
+	print(k)
+	print(arg2)
+
+def main():
+	k = 4
+	print(f(4,5, k))
+	test("Ciao", "a tutti", k)
+
+if __name__ == '__main__':
+	main()
+```
+
+Aggiustando lo script in questo modo, abbiamo creato la funzione **main()** che funge da *punto di partenza* per il nostro programma e tramite le righe:
+```python
+if __name__ == '__main__':
+	main()
+```
+Abbiamo detto all'interprete python di fare come segue:
+
+*Se questo file è stato lanciato come script, lancia la funzione main*
+
+Ogni elemento di questo costrutto lo vedremo più nel dettaglio quando parleremo di **moduli** e di **programmazione ad oggetti**, per ora prendiamolo per buono ed abituiamoci a scrivere sempre una funzione **main** da lanciare in questo modo, senza utilizzare variabili globali. L'unica cosa che rimarrà globale, per ora, sono gli *statement* di **import** dei moduli.
+
+**COMPITI:** dai al programma della calcolatrice che abbiamo iniziato a scrivere nelle puntate precedenti una funzione main e lanciala come abbiamo visto. Inoltre fai in modo che non ci siano variabili globali.
