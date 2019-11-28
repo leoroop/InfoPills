@@ -16,7 +16,7 @@
 - [11 - Estrarre informazioni dalle stringhe](#11---estrarre-informazioni-dalle-stringhe)
 ## 0 - Introduzione ai linguaggi di programmazione
 
-Partiamo dal primo *concetto fondamentale* senza in quale non ci sarebbe possibile proseguire col resto:
+Partiamo dal primo *concetto fondamentale* senza il quale non ci sarebbe possibile proseguire col resto:
 - un computer è un attrezzo stupido che fa calcoli
 - fa sempre e solo ciò che gli si dice di fare.
 - è molto molto rapido ad eseguire i suddetti calcoli
