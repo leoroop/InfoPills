@@ -1,20 +1,20 @@
 
-# Indice 
-- [Indice](#indice)
-  - [Pillola informatica #0](#pillola-informatica-0)
-  - [Pillola informatica #1](#pillola-informatica-1)
-  - [Pillola informatica #2](#pillola-informatica-2)
-  - [Pillola informatica #3](#pillola-informatica-3)
-  - [Pillola informatica #4](#pillola-informatica-4)
-      - [BONUS: Installazione di atom](#bonus-installazione-di-atom)
-  - [Pillola informatica #5](#pillola-informatica-5)
-  - [Pillola informatica #6](#pillola-informatica-6)
-  - [Pillola informatica #7](#pillola-informatica-7)
-  - [Pillola informatica #8](#pillola-informatica-8)
-  - [Pillola informatica #9](#pillola-informatica-9)
-  - [Pillola informatica #10](#pillola-informatica-10)
-      - [COMPITI: Calcolatrice a linea di comando](#compiti-calcolatrice-a-linea-di-comando)
-## Pillola informatica #0
+### Indice:
+- [0 - Introduzione ai linguaggi di programmazione](#0---introduzione-ai-linguaggi-di-programmazione)
+- [1 - Com'è fatto un programma: variabili, statement ed espressioni](#1---comè-fatto-un-programma-variabili-statement-ed-espressioni)
+- [2 - Introduzione al pc, ai tipi di dato e ai costrutti in python](#2---introduzione-al-pc-ai-tipi-di-dato-e-ai-costrutti-in-python)
+- [3 - Funzioni ed oggetti](#3---funzioni-ed-oggetti)
+- [4 - Installiamo python (su Windows)](#4---installiamo-python-su-windows)
+    - [BONUS: Installazione di atom](#bonus-installazione-di-atom)
+- [5 - Hello python!](#5---hello-python)
+- [6 - Risolutore di calcoli](#6---risolutore-di-calcoli)
+- [7 - Definiamo una funzione](#7---definiamo-una-funzione)
+- [8 - Funzioni: scaviamo più a fondo](#8---funzioni-scaviamo-più-a-fondo)
+- [9 - Visibilità delle variabili](#9---visibilità-delle-variabili)
+- [10 - Cercare documentazione online](#10---cercare-documentazione-online)
+    - [COMPITI: Calcolatrice a linea di comando](#compiti-calcolatrice-a-linea-di-comando)
+- [11 - Estrarre informazioni dalle stringhe](#11---estrarre-informazioni-dalle-stringhe)
+## 0 - Introduzione ai linguaggi di programmazione
 
 Partiamo dal primo *concetto fondamentale* senza in quale non ci sarebbe possibile proseguire col resto:
 - un computer è un attrezzo stupido che fa calcoli
@@ -31,9 +31,7 @@ I due approcci di cui sopra sono molto diversi ed ognuno presenta i suoi vantagg
 - Quando hai bisogno di un software che abbia *prestazioni molto elevate* pur facendo un botto di calcoli è molto probabile che la via giusta sia un linguaggio compilato
 - Quando hai bisogno di un software da *mettere in campo alla svelta perdendo poco tempo per scriverlo* un linguaggio interpretato ti permette di fare generalmente prima
 
-
-
-## Pillola informatica #1
+## 1 - Com'è fatto un programma: variabili, statement ed espressioni
 
 Facciamo una breve carrellata di quelli che sono gli **elementi** che compongono un **programma**. Non ci aiuteranno ancora del tutto a capire come scriverne uno, ma possiamo pensarla come una piccola *raccolta* di parole chiave generiche che pongono le basi per andare più spediti mentre procediamo in questo viaggio. Cominciamo quindi col dire cos'è una **variabile**: senza appellarci a concetti strani, una variabile *di fatto* è una *scatola*, un contenitore che possiamo utilizzare per *\"mettere da parte\"* qualcosa ed utilizzarlo in un secondo momento e, come dice anche il nome, **può cambiare nel tempo**.
 
@@ -55,23 +53,19 @@ Com'è ovvio che sia, ci sono praticamente *infinite espressioni ed infiniti sta
 
 
 
-## Pillola informatica #2
+## 2 - Introduzione al pc, ai tipi di dato e ai costrutti in python
 
 Ripartiamo dalla puntata precedente e facciamo un piccolo recap di un paio di concetti che mi sembra utile tenere sotto mano prima di proseguire col resto. Vediamo velocemente *com'è fatto un computer*, poi, in ultima battuta, iniziamo a parlare di **python** come strumento per scrivere programmi.
 
 In soldoni, senza rifarci troppo a nomi altisonanti della teoria dell'informatica, un computer è fatto, *__a livello logico__*, di 3 *"pezzi"* fondamentali di cui dobbiamo tenere conto quando facciamo i programmi:
 - L'**unità di calcolo** (conosciuta anche come *processore* o *CPU*), brutalmente un sasso appiattito coi fulmini dentro. E' il *cervello* ed colui che esegue davvero le istruzioni che vogliamo far fare al computer.
-
 - La **memoria centrale** (la *ram*, il posto in cui il computer tiene tutto quello che sta maneggiando mentre esegue un programma)
-
 - La **memoria di massa** (detta spesso anche storage o "hard disk") è dove vengono salvati i file che possiamo leggere e/o utilizzare.
 
 Quando lo accendiamo, il computer fa letteralmente (anche se descritte MOOOLTO a spanne) questa serie di operazioni:
 
 - Va a cercare nella **memoria di massa** la roba che gli serve per funzionare
-
 - Carica quella roba in **memoria centrale**
-
 - Esegue tutto quello che deve eseguire secondo questa logica:
   - *leggi istruzione*
   - *esegui istruzione*
@@ -99,7 +93,7 @@ Ci sono poi i costrutti logici, che sono quelli che ci permettono di esprimere d
 
 
 
-## Pillola informatica #3
+## 3 - Funzioni ed oggetti
 
 Vediamo gli ultimi 2 concetti puramente teorici riguardo la **programmazione in generale**, ma che sono concetti cardine per quanto riguarda **python**, senza avere almeno idea di cosa siano ci sarebbe impossibile capire quello che stiamo facendo.
 Iniziamo quindi col dire cos'è una **funzione**:
@@ -151,7 +145,7 @@ Soprattutto ques'ultima parte mi rendo conto sia molto molto fumosa, ma la svisc
 
 
 
-## Pillola informatica #4
+## 4 - Installiamo python (su Windows)
 
 Oggi ci mettiamo nelle condizioni di poter iniziare a scrivere dei programmi con l'ormai famigerato linguaggio **python**. La prima cosa da fare quindi è installarlo sul nostro computer in modo da trovarci un ambiente all'interno del quale poter far girare l'**interprete** e dargli in pasto i sorgenti dei programmi che andremo a scrivere.
 
@@ -268,7 +262,7 @@ Nella prossima puntata vedremo un paio di funzioni utili per cominciare ad utili
 
 
 
-## Pillola informatica #5
+## 5 - Hello python!
 
 La volta scorsa ci siamo lasciati con **python** ed **atom** freschi di installazione e quest'ultimo aperto e pronto all'uso. Oggi vediamo quindi come effettuare un primo mini-setup di un progetto e come iniziare a lavorare con python scrivendo il nostro **primo script**.
 
@@ -351,8 +345,7 @@ Il messaggio che ho sottolineato è l'**output a video** del nostro programma. Q
 A partire dalla prossima volta inizieremo a scrivere dei veri e propri programmi ed esploreremo il mondo della programmazione un po' più da vicino :D
 
 
-
-## Pillola informatica #6
+## 6 - Risolutore di calcoli
 
 Oggi comincia la vera svolta, iniziamo a fare un primo programmino che faccia realmente qualcosa. Come primo esempio ho pensato di fare un piccolo **risolutore di calcoli**. Una cosa semplice ma che ci aiuti a prendere confidenza con la stesura di codice, i primi costrutti e le prime *"pratiche comuni"* che permeano la vita di tutti i giorni quando si programma.
 
@@ -582,8 +575,7 @@ Non ci resta che salvarlo, lanciarlo e scoprire se funziona!
 
 **Compiti:** cerca di estendere il programma in modo tale da supportare l'elevamento a potenza
 
-
-## Pillola informatica #7
+## 7 - Definiamo una funzione
 
 Dopo aver scritto il nostro primo programma è arrivato il momento di esplorare meglio ciò che python può offrirci per scrivere dei programmi che siano sempre più utili e, possibilmente, intelligenti. In questa puntata riprendiamo lo script dell'episodio precedente e lo **estendiamo** per renderlo più fruibile in termini di utilizzo. Prima di cominciare facciamo, come in precedenza, una piccola carrellata delle novità che vediamo oggi:
 
@@ -708,7 +700,7 @@ Se proviamo ad eseguirlo noteremo che il funzionamento non è cambiato rispetto 
 
 
 
-## Pillola informatica #8
+## 8 - Funzioni: scaviamo più a fondo
 
 Trattandosi di un argomento piuttosto spinoso, almeno all'inizio. In questa pillola vediamo in modo un po' più approfondito l'argomento **funzioni**. Come abbiamo già detto, una *funzione* è una parte di codice che possiamo **riutilizzare** più di una volta a nostro piacimento senza doverla riscrivere. Volendo fare un elenco di quelle che sono le *caratteristiche* di una funzione, abbiamo i seguenti elementi:
 
@@ -761,7 +753,7 @@ Ovviamente, come ci si può aspettare e come abbiamo visto anche nelle pillole p
 Ci sono ancora tanti aspetti da esplorare sulle chiamate a funzione, ma prima di mettere altra carne sul fuoco è conveniente prendere confidenza con quanto visto finora.
 
 
-## Pillola informatica #9
+## 9 - Visibilità delle variabili
 
 Ora che abbiamo iniziato a maneggiare qualche costrutto e sappiamo più o meno cos'è una funzione, compiamo un ulteriore passo in avanti verso la comprensione del codice che abbiamo davanti. 
 
@@ -923,7 +915,7 @@ Ogni elemento di questo costrutto lo vedremo più nel dettaglio quando parleremo
 
 **COMPITI:** dai al programma della calcolatrice che abbiamo iniziato a scrivere nelle puntate precedenti una funzione main e lanciala come abbiamo visto. Inoltre fai in modo che non ci siano variabili globali.
 
-## Pillola informatica #10
+## 10 - Cercare documentazione online
 
 Siamo arrivati ad un punto in cui sappiamo a tutti gli effetti scrivere un programma. Seppur ancora con diversi limiti, abbiamo accesso possibilità in numero veramente elevato:
 
@@ -1003,3 +995,74 @@ Utilizzando la **funzione di calcolo** che abbiamo scritto nelle utile pillole e
 - In entrambi i casi, chiedere all'utente di inserire un'altra operazione da calcolare
 - Se l'utente inserisce il carattere `q` e preme **< INVIO >** il programma deve mostrare un messaggio di uscita e terminare
 - Se l'utente inserisce il carattere `h` e preme **< INVIO >** mostrare un messaggio di "help" che spiega come funziona il programma (Facoltativo, da fare per ultimo)
+
+## 11 - Estrarre informazioni dalle stringhe
+
+Con questa pillola iniziamo a vedere uno degli step che ci serviranno per risolvere l'esercizio lasciato alla fine della scorsa lezione. Riprendiamo i vari punti del testo:
+
+```
+- Chiedere all'utente di inserire l'operazione da effettuare
+- Se l'operazione è eseguibile, calcolarne il risultato e mostrarlo
+- Se l'operazione non è eseguibile, mostrare un messaggio errore
+- In entrambi i casi, chiedere all'utente di inserire un'altra operazione da calcolare
+- Se l'utente inserisce il carattere `q` e preme **< INVIO >** il programma deve mostrare un messaggio di uscita e terminare
+- Se l'utente inserisce il carattere `h` e preme **< INVIO >** mostrare un messaggio di "help" che spiega come funziona il programma (Facoltativo, da fare per ultimo)
+```
+
+In questa pillola vediamo come risolvere il primo (e di conseguenza avere i mezzi per procedere col secondo):
+
+`Chiedere all'utente di inserire l'operazione da effettuare`
+
+Con quello che abbiamo visto finora ci potrebbe venire naturale pensare di sfruttare gli elementi della lista `sys.argv` per ricevere in ingresso i dati che ci interessano. Questo approccio però ci darebbe i risultati sperati. Ciò è dovuto al fatto che quei parametri in ingresso al programma possono essere inseriti dall'utente **soltanto una volta** e per forza al momento del lancio del programma. Noi però vogliamo che l'utente possa eseguire **operazioni in sequenza** e terminare il programma quando lo desidera. Dobbiamo quindi trovare un metodo alternativo per ricevere dei dati in **input**.
+
+Con una breve ricerca scopriremo che, senza neanche troppa fantasia, python ci mette a disposizione la funzione `input` che ci permette di far immettere all'utente una `stringa`, che diventerà disponibile all'interno del nostro programma. Un'altra cosa carina della funzione `input` sta nel fatto che ci permette di passarle come argomento una `stringa` che verrà mostrata in output all'utente e che, per esempio, possiamo sfruttare per indicare all'utente cosa fare. Il nostro codice quindi sarà semplicemente:
+
+```python
+operazione = input("Inserisci l'operazione da eseguire: ")
+```
+
+Eseguendo questo codice, l'utente vedrà qualcosa del genere:
+
+```
+Inserisci l'operazione da eseguire:
+```
+Col programma in attesa di un suo input, supponiamo che l'utente scriva quanto segue e poi prema `<INVIO>`:
+
+```
+Inserisci l'operazione da eseguire: 5 + 6
+```
+
+A questo punto, nel nostro programma, all'interno della variabile `operazione` abbiamo la `stringa`: *5 + 6* che di fatto è l'operazione che dobbiamo ad andare ad eseguire. Ma come facciamo?
+
+Quello che dobbiamo fare è andare ad **estrarre** le informazioni che ci servono (e cioè l'operatore e i 2 operandi) per eseguire il calcolo dalla `stringa` che abbiamo acquisito. In gergo tecnico, questa operazione si chiama ***"parsing"***.
+
+Per *parsare* i dati di nostro interesse dalla nostra `stringa` dobbiamo pensare per un momento a com'è fatta, e cioè:
+
+*< NUMERO >* *< SPAZIO >* *< SIMBOLO >* *< SPAZIO >* *< NUMERO >* 
+
+Diventa quindi abbastanza evidente che nella nostra stringa ci sono tutte le informazioni che interessano e sono **separate da spazi**. A questo punto dovrebbe essere evidente che se riusciamo a separare la stringa togliendo gli spazi e tenendo la stringa saremmo a posto, ma come possiamo fare?
+
+Anche in questo caso con una ricerca veloce ci imbatteremmo nella funzione `split` (che è un **metodo** della *classe* **stringa**. Per rivedere questi concetti ti rimando alla [pillola #3](#3---funzioni-ed-oggetti)), la quale ci permette di **separare una stringa** in base ad un ***separatore*** che andiamo a passarvi come argomento e di mettere tutto quello che resta in una `lista` che potremo consultare senza problemi. Il nostro codice diventa quindi:
+
+```python
+operazione = input("Inserisci l'operazione da eseguire: ")
+dati = operazione.split(" ") # Con l'operatore . chiamo un metodo di una variabile, operazione è una stringa, quindi ha disponibile il metodo (funzione) split
+```
+
+A questo punto, `dati` è stata riempita come una lista ed i ogni slot c'è un pezzo di operazione che era seguito o precedeuto da uno `spazio`. Se ci basiamo sull'esempio di inserimento che abbiamo visto prima ( la stringa *5 + 6* ), `dati` è fatta così ( se vogliamo verificarlo, basterà dare un `print(dati)` ):
+
+```
+[5, + ,6]
+```
+Tutti sotto forma di `stringhe`, ma che adesso sono separate e pronte per essere interpretate ed utilizzate. Per uniformarci a quello che abbiamo fatto finora (e quindi poter riutilizzare il codice delle pillole precedenti) a questo punto ci basterà fare quanto segue:
+
+```python
+operazione = input("Inserisci l'operazione da eseguire: ")
+dati = operazione.split(" ")
+
+operand1 = int(dati[0])
+operator = dati[1]
+operand2 = int(dati[2])
+```
+
+A questo punto, possiamo procedere con tutti i controlli del caso e con la risoluzione del calcolo utilizzando la funzione che abbiamo scritto in precedenza. Resta però il problema di eseguire queste operazioni in una sequenza potenzialmente infinita. Come farlo sarà argomento della prossima pillola.
